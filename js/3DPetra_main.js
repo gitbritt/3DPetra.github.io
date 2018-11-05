@@ -14,7 +14,7 @@ var controls = new THREE.OrbitControls( camera );
 var geo = new THREE.PlaneBufferGeometry(100, 100, 0, 0);
 
 
-var texture = new THREE.TextureLoader().load( "..\Texture\sand_tebbbbbbbbbbxture.jpg" );
+var texture = new THREE.TextureLoader().load( "" );
 texture.repeat.set(1, 1);
 texture.wrapS = texture.wrapT = THREE.MirroredRepeatWrapping;
 
