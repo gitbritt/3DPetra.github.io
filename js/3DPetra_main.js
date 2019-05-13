@@ -22,8 +22,7 @@ var base_column_4 = new THREE.Mesh(base_column, treasury_color);
 var base_column_5 = new THREE.Mesh(base_column, treasury_color);
 var base_column_6 = new THREE.Mesh(base_column, treasury_color);
 
-
-var treasury_base = new THREE.BoxGeometry(5, .5, 20);
+var treasury_base = new THREE.BoxGeometry(5, .5, 30);
 treasury_base = new THREE.Mesh(treasury_base, treasury_color);
 
 var geo = new THREE.PlaneBufferGeometry(100, 100, 0, 0);
@@ -39,9 +38,14 @@ texture.wrapS = texture.wrapT = THREE.MirroredRepeatWrapping;
 ////Adding Objects to the Visual world
 var mat = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
 var plane = new THREE.Mesh(geo, mat);
-base_column_1.position.set(10, 10, 10);
+base_column_1.position.set(0, 5, 14);
+base_column_2.position.set(0, 5, 8.5);
+base_column_3.position.set(0, 5, 4);
+base_column_4.position.set(0, 5, -4);
+base_column_5.position.set(0, 5, -8.5);
+base_column_6.position.set(0, 5, -14);
 
-scene.add( treasury_base, base_column_1 );
+scene.add( treasury_base, base_column_1, base_column_2, base_column_3, base_column_4, base_column_5, base_column_6 );
 
 plane.rotateX( - Math.PI / 2);
 
