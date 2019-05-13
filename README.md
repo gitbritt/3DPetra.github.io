@@ -12,3 +12,9 @@ https://threejs.org/
 Chcek out source code repositry here
 
 https://github.com/mrdoob/three.js/
+
+
+# Screen shots
+Here is a real photo that I took at petra.
+Screen shots will appear when I have something to show
+![alt text](images/petra.jpeg)
