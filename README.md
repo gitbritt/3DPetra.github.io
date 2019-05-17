@@ -4,8 +4,11 @@ This is a start of a design of a 3D design of the Middle eastern city of Petra(G
 <br/>
 <a href = "demo.html">Demo</a>
 
-# Library used
 
+
+# Development
+
+Libaries used:
 
 https://threejs.org/
 
