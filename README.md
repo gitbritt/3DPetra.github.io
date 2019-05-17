@@ -8,7 +8,7 @@ This is a start of a design of a 3D design of the Middle eastern city of Petra(G
 
 # Development
 
-Libaries used:
+Libraries used:
 
 https://threejs.org/
 
