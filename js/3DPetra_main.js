@@ -10,8 +10,13 @@ camera.position.set(10, 10, 20)
 //Controls
 //var controls = new THREE.OrbitControls( camera );
 
-var controls = new THREE.PointerLockControls( camera );
+var move_forward = false;
+var move_backwards = false;
+var move_left = false;
+var move_right = false;
 
+var controls = new THREE.PointerLockControls( camera );
+scene.add( controls.getObject() );
 var blocker = document.getElementById( 'blocker' );
 				var instructions = document.getElementById( 'instructions' );
 
@@ -35,34 +40,41 @@ var blocker = document.getElementById( 'blocker' );
 
 				} );
 
-scene.add( controls.getObject() );
+                var onKeyDown = function ( event ) {
 
+					switch ( event.keyCode ) {
 
-var onKeyDown = function ( event ) {
-    switch ( event.keyCode ) {
-        case 38: // up
-        case 87: // w
-            moveForward = true;
-            break;
-        case 37: // left
-        case 65: // a
-            moveLeft = true;
-            break;
-        case 40: // down
-        case 83: // s
-            moveBackward = true;
-            break;
-        case 39: // right
-        case 68: // d
-            moveRight = true;
-            break;
-        case 32: // space
-            if ( canJump === true ) velocity.y += 350;
-            canJump = false;
-            break;
-    }
-};
+						case 38: // up
+						case 87: // w
+							moveForward = true;
+							break;
 
+						case 37: // left
+						case 65: // a
+							moveLeft = true;
+							break;
+
+						case 40: // down
+						case 83: // s
+							moveBackward = true;
+							break;
+
+						case 39: // right
+						case 68: // d
+							moveRight = true;
+							break;
+
+						case 32: // space
+							if ( canJump === true ) velocity.y += 350;
+							canJump = false;
+							break;
+
+					}
+
+				};
+        
+
+        
 
 //Creating the Visual objects of Petra, Jordan
 var renderer = new THREE.WebGLRenderer();
