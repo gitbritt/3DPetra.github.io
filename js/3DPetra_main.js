@@ -1,3 +1,5 @@
+//Based off of three.js Example from https://github.com/mrdoob/three.js/blob/master/examples/misc_controls_pointerlock.html
+
 var camera, scene, renderer, controls;
 
 var objects = [];
@@ -137,7 +139,7 @@ mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
 	// objects
 	var treasury_color = new THREE.MeshBasicMaterial( { color: 0x654321  } );
-	var base_column = new THREE.CylinderGeometry( 1, 1, 14, 1000);
+	var base_column = new THREE.CylinderGeometry( 10, 10, 200, 1000);
 	var base_column_1 = new THREE.Mesh(base_column, treasury_color);
 	var base_column_2 = new THREE.Mesh(base_column, treasury_color);
 	var base_column_3 = new THREE.Mesh(base_column, treasury_color);
@@ -145,19 +147,19 @@ scene.add( mesh );
 	var base_column_5 = new THREE.Mesh(base_column, treasury_color);
 	var base_column_6 = new THREE.Mesh(base_column, treasury_color);
 	
-	var treasury_base = new THREE.BoxGeometry(5, .5, 30);
+	var treasury_base = new THREE.BoxGeometry(10, 5, 200);
 	treasury_base = new THREE.Mesh(treasury_base, treasury_color);
-	var treasury_column_roof = new THREE.BoxGeometry(5, .5, 30);
+	var treasury_column_roof = new THREE.BoxGeometry(5, 5, 200);
 	treasury_column_roof = new THREE.Mesh(treasury_column_roof, treasury_color);
 	var geo = new THREE.PlaneBufferGeometry(100, 100, 0, 0);
 	
-	treasury_column_roof.position.set(0, 14, 0);
-	base_column_1.position.set(0, 7, 14);
-	base_column_2.position.set(0, 7, 8.5);
-	base_column_3.position.set(0, 7, 4);
-	base_column_4.position.set(0, 7, -4);
-	base_column_5.position.set(0, 7, -8.5);
-	base_column_6.position.set(0, 7, -14);
+	treasury_column_roof.position.set(0, 100, 0);
+	base_column_1.position.set(0, 7, 100);
+	base_column_2.position.set(0, 7, 60);
+	base_column_3.position.set(0, 7, 30);
+	base_column_4.position.set(0, 7, -30);
+	base_column_5.position.set(0, 7, -60);
+	base_column_6.position.set(0, 7, -100);
 	scene.add(treasury_base, treasury_column_roof , base_column_1, base_column_2, base_column_3, base_column_4, base_column_5, base_column_6 );
 	
 
